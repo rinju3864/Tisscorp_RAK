@@ -26,9 +26,14 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="shortcut icon" href="favicon.png type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="icon" href="favicon.png" type="image/x-icon">
+    <!-- Java Script
+    ================================================== -->
 
+    <script type="text/javascript" src="jss.js">
+
+    </script>
 </head>
 
 <body>
@@ -58,10 +63,10 @@
                     </p>
                     <h3>Product Enquiry</h3>
                     <div class="home-content__subscribe">                        
-                        <form id="mc-form" class="group" novalidate="true">
-                            <input type="email" value ="" name="EMAIL" class="email" id="mc-phone" placeholder="Phone" required=""> 
-                            <input type="submit" name="subscribe" value="CALL ME">
-                            <label for="mc-email" class="subscribe-message"></label>
+                        <form id="mc-form" class="group" name="mc-form" method="post">
+                            <input type="phone" value ="" name="phone" class="phone" id="mc-phone" placeholder="Phone" required="required"> 
+                            <input type="submit" name="subscribe" id="submit" value="CALL ME" onclick="showMessage()"/> 
+                            <label for="mc-email" id= "mcLbl" class="subscribe-message"></label>
                         </form>
                     
                     </div>
@@ -69,7 +74,7 @@
 
                 <div class="col-four home-content__counter">
                     <img class= "img-fluid" src="images/logo1.png" width="200"  align="middle" >
-                    <h3>Website Launching <br>on New year 2022!</h3>
+                    <h3>Website Launching <br>on March 15 2022!</h3>
                     <div class="home-content__clock">
                         <div class="top">
                             <div class="time days">
@@ -109,7 +114,7 @@
             </ul> <!-- end home-social -->
 
             <div class="row home-copyright">
-                <span>Copyright © Tisscorp 2021</span> 
+                <span>Copyright © Tisscorp 2022</span> 
                 <span>Developed by <a href="https://www.tisscorp.com/">Rinju Abraham</a></span>
                  
                 
@@ -212,12 +217,12 @@
         </div>
     </div>
 
-    <!-- Java Script
-    ================================================== -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/polygons.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript" src="ajax-script.js"></script>
+
 </body>
 
 </html>
