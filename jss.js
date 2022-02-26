@@ -3,9 +3,6 @@
     document.getElementById('mcLbl').innerHTML="hi";
 }*/
 function showMessage() {
-    //alert("Hello friends, this is not message.");
-    
-    
     var phone = $('#mc-phone').val();
     var phoneno = /^\d{10}$/;
   if((phone.match(phoneno)))
