@@ -1,7 +1,4 @@
-/* ===================================================================
- * Count - Main JS
- *
- * ------------------------------------------------------------------- */
+
 
 (function($) {
 
@@ -87,7 +84,7 @@
     * ------------------------------------------------------ */
     var ssFinalCountdown = function() {
 
-        var finalDate =  new Date("January 01, 2022 10:00:00").getTime();
+        var finalDate =  new Date("March 15, 2022 10:00:00").getTime();
         //-date: "Mar 25 2021",
 
         $('.home-content__clock').countdown(finalDate)
@@ -110,37 +107,22 @@
     };
 
 
-   /* AjaxChimp
-    * ------------------------------------------------------ */
-    var ssAjaxChimp = function() {
-        
-        $('#mc-form').ajaxChimp({
-            language: 'es',
-            url: cfg.mailChimpURL
-        });
-
-        // Mailchimp translation
-        //
-        //  Defaults:
-        //	 'submit': 'Submitting...',
-        //  0: 'We have sent you a confirmation email',
-        //  1: 'Please enter a value',
-        //  2: 'An email address must contain a single @',
-        //  3: 'The domain portion of the email address is invalid (the portion after the @: )',
-        //  4: 'The username portion of the email address is invalid (the portion before the @: )',
-        //  5: 'This email address looks fake or invalid. Please enter a real email address'
-
-        $.ajaxChimp.translations.es = {
-            'submit': 'Submitting...',
-            0: '<i class="fas fa-check"></i> We have sent you a confirmation email',
-            1: '<i class="fas fa-exclamation-triangle"></i> You must enter a valid e-mail address.',
-            2: '<i class="fas fa-exclamation-triangle"></i> E-mail address is not valid.',
-            3: '<i class="fas fa-exclamation-triangle"></i> E-mail address is not valid.',
-            4: '<i class="fas fa-exclamation-triangle"></i> E-mail address is not valid.',
-            5: '<i class="fas fa-exclamation-triangle"></i> E-mail address is not valid.'
-        }
-    };
-
+    function phonenumber()
+    {
+        var inputtxt= document.getElementById('mc-phone').value;
+       document.getElementById('mcLbl').value="hai";
+        alert("het");
+      var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+      if((inputtxt.value.match(phoneno)))
+      {
+        alert("message");  return true;
+      }
+       
+     else
+     {
+        alert("message");  return false;
+      }
+    }
 
    /* initialize
     * ------------------------------------------------------ */
@@ -157,3 +139,4 @@
 
 
 })(jQuery);
+
